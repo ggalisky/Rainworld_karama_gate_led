@@ -47,6 +47,8 @@ public:
 
     void showSplash();
 
+    void cat();
+
     void bruh();
 
     uint16_t getVbzFontColor(String lineRef);

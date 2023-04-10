@@ -110,14 +110,16 @@ void setup()
       PANEL_RES_Y,
       PANEL_CHAIN);
 
-      display.displaySetBrightness(190);
+      display.displaySetBrightness(255);
 
   display.showSplash();
 
   //delay(10000);
 
-  display.bruh();
+  //display.bruh();
   delay(1000);
+  //display.cat();
+  //delay(40000);
 
       uint32_t freq = 240;
     setCpuFrequencyMhz(freq);
@@ -128,7 +130,14 @@ void setup()
 
 void loop()
 {
+  //display.showSplash();
+  display.cat();
   display.showSplash();
+  display.showSplash();
+  display.showSplash();
+  display.showSplash();
+  
+  
   //Serial.println("test");
   
 }
