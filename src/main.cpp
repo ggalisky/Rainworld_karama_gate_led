@@ -110,9 +110,9 @@ void setup()
       PANEL_RES_Y,
       PANEL_CHAIN);
 
-      display.displaySetBrightness(255);
+      display.displaySetBrightness(200);
 
-  display.showSplash();
+  display.showSplash(70);
 
   //delay(10000);
 
@@ -131,11 +131,23 @@ void setup()
 void loop()
 {
   //display.showSplash();
+  uint16_t refresh_rate = 42;
+  
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+  display.showSplash(refresh_rate);
+
+  for (int i = 0; i <20; i++)
+  {
+    display.showSplash(refresh_rate);
+  }
   display.cat();
-  display.showSplash();
-  display.showSplash();
-  display.showSplash();
-  display.showSplash();
+
+
   
   
   //Serial.println("test");

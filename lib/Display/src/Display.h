@@ -45,7 +45,7 @@ public:
 
     void displaySetBrightness(int brightness);
 
-    void showSplash();
+    void showSplash(uint16_t refresh_rate);
 
     void cat();
 

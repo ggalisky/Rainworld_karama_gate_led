@@ -3276,14 +3276,17 @@ void Display::cat()
 }
 
 /// 
-void Display::showSplash()
+void Display::showSplash(uint16_t refresh_rate)
 {
 //https://javl.github.io/image2cpp/
 
-uint16_t delay_value = 45;//54 was good
+uint16_t delay_value;//54 was good
+delay_value = refresh_rate;
 
     
-    uint16_t karma_color = dma_display->color565(225, 255, 255); //GREEN, BLUE, RED - the default is wrong
+    //uint16_t karma_color = dma_display->color565(225, 255, 255); //GREEN, BLUE, RED - the default is wrong
+	uint16_t karma_color = dma_display->color565(182, 15, 252);//252, 182, 3 rgb
+	//uint16_t karma_color = dma_display->color565(186, 50, 226);//226,186,109
 //uint16_t karma_color = dma_display->color565(0xFF, 0x64, 0x7e); //GREEN, BLUE, RED 
 //uint16_t karma_color = dma_display->color565(0, 0, 0xFF); //GREEN, BLUE, RED
 
@@ -3326,14 +3329,14 @@ bool fade_latch_toggle = false;
 for( int i = 0; i < epd_bitmap_allArray_LEN; i++)
 {
    //uint16_t karma_color = dma_display->color565(color_val, color_val, 255);
-   uint16_t karma_color = dma_display->color565(255, 255, 255);
+   //uint16_t karma_color = dma_display->color565(255, 255, 255);
    Display::dma_display->drawBitmap(0, 0, epd_bitmap_allArray[i], 128, 64, karma_color);
    delay(delay_value);
    Display::dma_display->clearScreen();
    Display::dma_display->fillScreen(Display::myBLACK);
    //Display::dma_display->setBrightness8(20);
    
-       if(true)
+       if(false)
     {
         unsigned long LED_update_duration = 1;
         double samples = 600;
